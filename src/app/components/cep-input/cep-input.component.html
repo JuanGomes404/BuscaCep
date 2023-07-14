@@ -1,0 +1,53 @@
+<form [formGroup]="form" (ngSubmit)="salvar()">
+  <div class="input__cep">
+    <label for="cep"
+      >CEP:
+      <input
+        type="text"
+        [placeholder]="textoInput"
+        (blur)="preencherCampos()"
+        formControlName="cep"
+        id="cep"
+        maxlength="9"
+        (keydown)="clicouEnter($event)"
+      />
+    </label>
+    <span class="erro__txt" *ngIf="form.get('cep')?.errors">
+      O campo de CEP deve ser preenchido com 8 números
+    </span>
+  </div>
+
+  <label for="rua"
+    >Rua:
+    <input type="text" name="" id="rua" formControlName="rua" />
+  </label>
+
+  <label for="bairro"
+    >Bairro:
+    <input type="text" name="" id="bairro" formControlName="bairro" />
+  </label>
+
+  <label for="cidade"
+    >Cidade:
+    <input type="text" name="" id="cidade" formControlName="cidade" />
+  </label>
+
+  <label for="estado"
+    >Estado:
+    <input type="text" name="" id="estado" formControlName="estado" />
+  </label>
+
+  <label for="ibge"
+    >IBGE:
+    <input type="text" name="" id="ibge" formControlName="ibge" />
+  </label>
+
+  <div class="center">
+    <input
+      type="button"
+      value="Limpar Campos"
+      class="btn"
+      (click)="limparCampos()"
+    />
+  </div>
+</form>

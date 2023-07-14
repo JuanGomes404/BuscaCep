@@ -1,0 +1,82 @@
+
+$form-border-color: #dddddd59
+$form-border-radius: 4px
+$form-padding: 60px
+$form-width: 80%
+
+$input-border-color: #ccc
+$input-border-radius: 4px
+$input-padding: 10px
+$input-focus-border-color: #428bca09
+$input-focus-box-shadow: 0 0 5px rgba(66, 202, 145, 0.5)
+
+$button-background-color: green
+$button-color: #fff
+$button-padding: 10px 20px
+$button-border-radius: 4px
+
+form
+
+  border: 2px solid $form-border-color
+  border-radius: $form-border-radius
+  padding: $form-padding
+  display: flex
+  flex-wrap: wrap
+  flex-direction: column
+  gap: 15px
+  justify-content: center
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.103)
+
+
+
+
+  input[type="text"]
+    border: 1px solid $input-border-color
+    border-radius: $input-border-radius
+    padding: $input-padding
+    width: 15vw
+
+
+    &:focus
+      border-color: $input-focus-border-color
+      box-shadow: $input-focus-box-shadow
+
+.btn
+  background-color: $button-background-color
+  color: white
+  padding: 10px
+  font-size: 16px
+  border-radius: 10px
+  border: none
+  cursor: pointer
+  font-weight: bolder
+
+.center
+  display: flex
+  justify-content: center
+
+
+label
+  display: flex
+  justify-content: flex-end
+  align-items: center
+  gap: 10px
+
+.erro__txt
+  font-size: 7.5pt
+  text-align: center
+  width: 20vw
+  color: red
+  display: flex
+  justify-content: flex-end
+
+
+.input__cep
+  display: flex
+  align-items: center
+  justify-content: flex-end
+  flex-wrap: wrap
+
+
+.erro__border
+  border: 1px solid red
